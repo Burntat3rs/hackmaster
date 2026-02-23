@@ -1,5 +1,5 @@
 import random
-from weaponTable import split_index_from_table
+from genericFunctions import split_index_from_table
 
 
 #type, color, value

@@ -2,6 +2,7 @@ from weaponTable import *
 from mundaneItemTable import *
 from gemstoneTable import *
 from itemClass import *
+from rollGem import print_gem
 import random
 
 
@@ -18,8 +19,8 @@ def main():
 
     print("\n\n")
 
-    roll_gems(5)
-
+    for i in range(5):
+       print_gem()
 if __name__ == "__main__":
     main()
 
