@@ -38,7 +38,7 @@ template_weapon = "":  {
         "can_dismount":
         "ignore_armor":
         "can_set_for_charge":
-        "defense_value":
+        "defense_bonus":
         "phalanx_rank":
     },
 
@@ -97,3 +97,10 @@ def print_weapon_list(table):
     for tup in weapon_table:
         print(f"Weapon: {tup[0]}    Weight:{tup[1]}\n")
 
+def roll_weapon(rolls=1):
+    random_weapons = random.choices(
+        population=split_index_from_table(weapon_table, 0),
+        weights=split_index_from_table(weapon_table, 1),
+        k=rolls
+    )
+    return random_weapons

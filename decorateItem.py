@@ -42,11 +42,76 @@ verbs = ["grasping", "holding", "eating", "devouring", "battling", "shaping", "f
 "vomiting", "saving", "defeating", "emanating from", "leaping toward", "fleeing from", "running toward",
 "releasing", "protecting", "carving a picture of", "swatting"]
 
+decorate_methods = ["laquering", "etching", "engraving", "carving", "cast"]
+
+def roll_feature(item):
+    return random.choice(decoratable_features[item.type])
+
+def roll_method():
+    return random.choice(decorate_methods)
+
+def roll_verb():
+    return random.choice(verbs)
+
+def roll_shape():
+    return random.choice(shapes)
+
+def roll_material():
+    return random.choice(materials)
+
 def is_decorated(percentage):
     roll = random.randint(1, 100)
     if roll <= percentage:
         return True
     return False
 
+def material_decoration(item, feature=None):
+    material = roll_material()
+    
+    if feature None:
+        feature = roll_feature(item)
+
+    item.description = item.description + f"The {feature} is made from {material}"
+
+def shape_decoration(item, feature=None, method=None):
+    shape = roll_shape()
+
+    if feature None:
+        feature = roll_feature(item)
+        
+    if method == None and is_decorated(25) == True:
+        method = roll_method()
+        item.description = item.description + f"The {item.name}'s {feature} has {a_or_an(method)} {method} on it in the shape of {shape}."
+        item.description = verb_decoration(item.description)
+        return
+    
+    item.description = item.description + f"The {item.name}'s {feature} is in the shape of {shape}"
+    item.description = verb_decoration(item.description)
+
+    return
+    
+
+def verb_decoration(str):
+    if is_decorated(25) == False:
+        return str
+    verb = roll_verb
+    shape = roll_shape
+    #str slice to remove period
+    return str[0:-1] + f"{verb} {a_or_an(shape_two)} {shape_two}."
+
+
+def choose_decoration_type():
+    pass
+
+def pluralize(str):
+    if str[-1:] not 's':
+        return str + 's'
+    return
+
 def decorate(item):
+
+    if not is_decorated(10):
+        return
+    else:
+        
 
