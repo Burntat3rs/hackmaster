@@ -18,8 +18,78 @@ weapon_table = [("battle_axe", 42), ("hand_axe", 15), ("club", 6),
 ("shortbow", 39), ("sling", 18)
 ]
 
-blade_table = [
-]
+template_weapon = "":  {
+        "name":
+        "type":
+        "value":
+        "weight":
+        "damage":
+        "shield_damage":
+        "damage_type":
+        "speed":
+        "jab_speed":
+        "jab_damage":
+        "size":
+        "reach":
+        "skill":
+        "strength_requirement":
+        "max_range":
+        "range_step":
+        "can_dismount":
+        "ignore_armor":
+        "can_set_for_charge":
+        "defense_value":
+        "phalanx_rank":
+    },
+
+weapons = {
+    "battle_axe": battle_axe {
+        "name": "Battle Axe",
+        "type": "axe",
+        "value": (5, "sp"),
+        "weight": 3.5,
+        "damage": [(4, 3, True, 0)], #(num of dice, die size, penetrates?, additional damage)
+        "shield_damage": [(3, 3, True, 0)],
+        "damage_type": "hacking",
+        "speed": 12,
+        "jab_speed": None,
+        "jab_damage": None,
+        "size": "medium",
+        "reach": 3.0,
+        "skill": "low",
+        "strength_requirement": 10,
+        "max_range": None,
+        "range_step": None,
+        "can_dismount": False,
+        "ignore_armor": False,
+        "can_set_for_charge": False,
+        "defense_bonus": False,
+        "phalanx_rank": None
+    },
+    "hand_axe": hand_axe {
+        "name": "Hand Axe",
+        "type": "axe",
+        "value": (3, "sp"),
+        "weight": 2,
+        "damage": [(1, 4, True, 0), (1, 6, True, 0)],
+        "shield_damage": [(1, 6, True, 0)],
+        "damage_type": "hacking",
+        "speed": 8,
+        "jab_speed": None,
+        "jab_damage": None,
+        "size": "small",
+        "reach": 1.5,
+        "skill": "low",
+        "strength_requirement": 6,
+        "max_range": None,
+        "range_step": None,
+        "can_dismount": False,
+        "ignore_armor": False,
+        "can_set_for_charge": False,
+        "defense_bonus": False,
+        "phalanx_rank": None
+    },
+}
 
 
 #prints the list
