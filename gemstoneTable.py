@@ -56,14 +56,6 @@ def get_gem_quality():
     return random.uniform(-.5, .5)
 
 def print_gem(table):
-    for tup in weapon_table:
-        print(f"Gem: {tup[0]}    Weight:{tup[1]}\n")
+    for tup in table:
+        print(f"Gem: {tup[0]}    Value:{tup[1]}\n")
 
-def get_table_category(table):
-    
-    chosen_category = random.choices(
-        population=split_index_from_table(table, 0),
-        weights=split_index_from_table(table, 1)
-    )
-    
-    return chosen_category[0]
