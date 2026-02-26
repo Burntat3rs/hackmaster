@@ -18,32 +18,9 @@ weapon_table = [("battle_axe", 42), ("hand_axe", 15), ("club", 6),
 ("shortbow", 39), ("sling", 18)
 ]
 
-template_weapon = "":  {
-        "name":
-        "type":
-        "value":
-        "weight":
-        "damage":
-        "shield_damage":
-        "damage_type":
-        "speed":
-        "jab_speed":
-        "jab_damage":
-        "size":
-        "reach":
-        "skill":
-        "strength_requirement":
-        "max_range":
-        "range_step":
-        "can_dismount":
-        "ignore_armor":
-        "can_set_for_charge":
-        "defense_bonus":
-        "phalanx_rank":
-    },
 
 weapons = {
-    "battle_axe": battle_axe {
+    "battle_axe":  {
         "name": "Battle Axe",
         "type": "axe",
         "value": (5, "sp"),
@@ -66,7 +43,7 @@ weapons = {
         "defense_bonus": False,
         "phalanx_rank": None
     },
-    "hand_axe": hand_axe {
+    "hand_axe": {
         "name": "Hand Axe",
         "type": "axe",
         "value": (3, "sp"),
