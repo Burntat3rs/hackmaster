@@ -2,7 +2,7 @@ from itemClass import Item
 
 class Weapon(Item):
     def __init__(self, dict):
-        super().__init__(self, dict["name"], "weapon")
+        super().__init__(dict["name"], dict["type"])
         self.value = dict["value"]
         self.weight = dict["weight"]
         self.damage = dict["damage"]
@@ -23,7 +23,7 @@ class Weapon(Item):
         self.defense_bonus = dict["defense_bonus"]
         self.phalanx_rank = dict["phalanx_rank"]
 
-        self.description = f"This is a {self.name}"
+        self.description = f"This is a {self.name}. "
 
 
 

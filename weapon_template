@@ -1,0 +1,23 @@
+template_weapon = "": {
+        "name":
+        "type":
+        "value":
+        "weight":
+        "damage":
+        "shield_damage":
+        "damage_type":
+        "speed":
+        "jab_speed":
+        "jab_damage":
+        "size":
+        "reach":
+        "skill":
+        "strength_requirement":
+        "max_range":
+        "range_step":
+        "can_dismount":
+        "ignore_armor":
+        "can_set_for_charge":
+        "defense_bonus":
+        "phalanx_rank":
+    },
