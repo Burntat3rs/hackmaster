@@ -9,9 +9,10 @@ from weaponClass import Weapon
 
 
 def main():
-    weapon_test = Weapon(weapons["battle_axe"])
-    shape_decoration(weapon_test)
-    print(weapon_test.description)
+    for i in range(10):
+        weapon_test = Weapon(weapons["battle_axe"])
+        decorate(weapon_test)
+        print(weapon_test.description)
     
 if __name__ == "__main__":
     main()

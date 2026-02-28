@@ -1,7 +1,7 @@
 from genericFunctions import split_index_from_table, get_table_category
 from gemstoneTable import gemstones_category, get_gem_quality, gem_size
 import random
-from itemClass import Gem
+from gemClass import Gem
 
 def roll_gem():
     

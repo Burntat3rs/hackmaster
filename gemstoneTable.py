@@ -10,7 +10,7 @@ common_gems = [("azurite", "vibrant blue", 10), ("banded agate", "pink", 10),
 ("turquoise", "turquoise", 10)
 ] 
 
-uncommon_gems = [("bloodstone", "black with blood red flecks", 50), ("carnelian", "orangish red", 50),
+uncommon_gems = [("bloodstone", "black and blood red flecked", 50), ("carnelian", "orangish red", 50),
 ("chalcedony", "pale purple", 50), ("chrysoprase", "seafoam green", 50), ("citrine", "pale gold", 50),
 ("jasper", "deep red with black veins", 50), ("moonstone", "bone white with bluish center", 50),
 ("onyx", "deep black", 50), ("rock crystal", "clear", 50), ("sardonyx", "bands of red", 50),
